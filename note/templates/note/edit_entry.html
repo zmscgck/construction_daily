@@ -2,13 +2,13 @@
 
 {% block content %}
     <p>
-    编辑<a href="{% url 'note:topic' topic.id %}">{{ topic }}</a>施工日志:
+    修改<a href="{% url 'note:topic' topic.id %}">{{ topic }}</a>日报:
     </p>
 
 	<form action="{% url 'note:edit_entry' entry.id %}" method='post'>
 	  {%csrf_token%}
 	  {{form.as_p}}
-	  <button name="submit">保存日志</button>
+	  <button name="submit">保存日报</button>
 	</form>
 
 {% endblock content %}

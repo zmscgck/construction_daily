@@ -25,7 +25,7 @@ SECRET_KEY = '_1)pyzm^ov_+*q-b^iw^hpvz=#%93u)@1x4*!@r_g9ow%k6rd3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #第三方应用程序
+    'bootstrap3',
     # my apps
     'note',
     'users',
@@ -125,3 +127,8 @@ STATIC_URL = '/static/'
 
 # my_set
 LOGIN_URL = '/users/login/'
+
+# django-bootstrap3的设置
+BOOTSTRAP3 = { 
+ 'include_jquery': True, 
+ }
